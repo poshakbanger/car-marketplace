@@ -14,7 +14,6 @@ function OwnersDetail({carDetail}) {
     const ownerUserId = carDetail?.createdBy.split('@')[0];
     //Ceate Current User ID
     try {
-      
       await Service.CreatSendBirdUser(userId,user?.fullName,user?.imageUrl)
       .then(resp=>{
         console.log(resp);
@@ -22,7 +21,6 @@ function OwnersDetail({carDetail}) {
     } catch (error) {}
     //owner User Id
     try {
-      
       await Service.CreatSendBirdUser(ownerUserId,carDetail?.userName,carDetail?.userImageUrl)
       .then(resp=>{
         console.log(resp);

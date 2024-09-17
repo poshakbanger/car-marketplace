@@ -11,7 +11,7 @@ function Inbox() {
   useEffect(() => {
     if (user) {
       const id = (user.primaryEmailAddress?.emailAddress).split("@")[0];
-      setUserId(userId);
+      setUserId(id);
     }
   }, [user]);
 
@@ -37,7 +37,8 @@ function Inbox() {
                     {
                         includeEmpty:true
                     }
-                 } />
+                 } 
+                 />
               </div>
               {/* Channel / Message Area */}
               <div className="md:col-span-2 shadow-lg">

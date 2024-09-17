@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCheck } from 'react-icons/fa6';
-function Features({features}) {
+function Features({features = {}}) {
   return (
         <div className='p-10 border shadow-md rounded-xl my-7'>
             <h2 className='font-medium text-2xl'>Features</h2>

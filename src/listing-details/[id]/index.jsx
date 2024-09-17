@@ -7,7 +7,7 @@ import { CarImages, CarListing } from './../../../configs/schema';
 import { eq } from 'drizzle-orm';
 import Service from '@/Shared/Service';
 import ImageGallery from '../components/ImageGallery';
-import { Description } from '@radix-ui/react-toast';
+import Description from '../components/Description';
 import Features from '../components/Features';
 import Pricing from '../components/Pricing';
 import Specification from '../components/Specification';
@@ -49,7 +49,7 @@ function ListingDetail() {
             {/* Description  */}
               <Description carDetail={carDetail}/>
             {/* Features List */}
-            <Features features={carDetail?.features}/>
+            <Features features={carDetail?.features} /> {/*features={carDetail?.features}*/}
             {/* Financial calculator*/}
             <FinancialCalculator carDetail={carDetail}/>
             </div>
